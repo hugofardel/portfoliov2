@@ -14,13 +14,13 @@ Ce portfolio est une application web single-page développée avec React et styl
 1. Clonez le dépôt :
 
    ```
-   git clone https://github.com/votre-username/mon-portfolio-react.git
+   git clone https://github.com/hugofardel/portfoliov2.git
    ```
 
 2. Naviguez dans le dossier du projet :
 
    ```
-   cd mon-portfolio-react
+   cd portfoliov2
    ```
 
 3. Installez les dépendances :

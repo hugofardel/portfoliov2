@@ -1,4 +1,4 @@
-import Hero from "@/sections/hero.jsx";
+import Hero from "@/sections/Hero.jsx";
 import Jobs from "@/sections/Jobs.jsx";
 import Projects from "@/sections/Projects.jsx";
 import Socials from "@/sections/Socials.jsx";

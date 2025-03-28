@@ -6,11 +6,13 @@ const socialLinks = [
 	{
 		id: 1,
 		icon: <Github />,
+		title: "Github",
 		url: "https://github.com/hugofardel",
 	},
 	{
 		id: 2,
 		icon: <Linkedin />,
+		title: "Linkedin",
 		url: "https://www.linkedin.com/in/hugo-fardel-6414601b4/",
 	},
 ];
@@ -24,14 +26,11 @@ function Socials() {
 					<p className="text-3xl sm:text-4xl text-primary-light mb-5">Retrouvez moi</p>
 					<ul className="flex gap-4 sm:gap-8">
 						{socialLinks.map((link) => (
-							<a
-								href={link.url}
-								target="__blank"
-								key={link.id}
-								className="text-gray-400 hover:text-indigo-400 cursor-pointer rounded-lg bg-ternary-dark hover:bg-gray-100 shadow-sm p-4 duration-300"
-							>
-								<i className="text-xl sm:text-2xl md:text-3xl">{link.icon}</i>
-							</a>
+							<li className="text-gray-400 hover:text-indigo-400 cursor-pointer rounded-lg bg-ternary-dark hover:bg-gray-100 shadow-sm duration-300">
+								<a href={link.url} title={link.title} target="__blank" key={link.id} className="p-4 block">
+									<i className="text-xl sm:text-2xl md:text-3xl">{link.icon}</i>
+								</a>
+							</li>
 						))}
 					</ul>
 				</div>

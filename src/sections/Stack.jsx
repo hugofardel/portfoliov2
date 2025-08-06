@@ -1,11 +1,10 @@
-import React from "react";
 import StackCard from "@/components/StackCard.jsx";
 
 import ReactSvg from "@/assets/react.svg";
+import NextSvg from "@/assets/next.svg";
 import StorybookSvg from "@/assets/storybook.svg";
 import githubSvg from "@/assets/github.svg";
 import reduxSvg from "@/assets/redux.svg";
-import vuejsSvg from "@/assets/vuejs.svg";
 import styledComponentsSvg from "@/assets/styled-components.svg";
 import nodejsSvg from "@/assets/nodejs.svg";
 import vitestSvg from "@/assets/vitest.svg";
@@ -23,7 +22,7 @@ function Stack() {
 
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 md:grid-cols-3 mt-6 sm:gap-10">
 				<StackCard icon={ReactSvg} name="React" />
-				<StackCard icon={vuejsSvg} name="Vue" />
+				<StackCard icon={NextSvg} name="Next" />
 				<StackCard icon={reduxSvg} name="Redux" />
 				<StackCard icon={typescryptSvg} name="Typescript" />
 				<StackCard icon={nodejsSvg} name="NodeJs" />

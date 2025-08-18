@@ -20,7 +20,7 @@ function Stack() {
 				<div className="flex justify-between border-b border-secondary-dark pb-3 gap-3"></div>
 			</div>
 
-			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 md:grid-cols-3 mt-6 sm:gap-10">
+			<div className="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 mt-6 gap-5 sm:gap-10">
 				<StackCard icon={ReactSvg} name="React" />
 				<StackCard icon={NextSvg} name="Next" />
 				<StackCard icon={reduxSvg} name="Redux" />

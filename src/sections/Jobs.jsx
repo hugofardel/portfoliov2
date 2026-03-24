@@ -1,5 +1,3 @@
-import React from "react";
-
 import SSIADsvg from "@/assets/ssiad.svg";
 import SingleJob from "@/components/SingleJob.jsx";
 
@@ -14,9 +12,17 @@ function Jobs() {
 				<SingleJob
 					imgSrc={SSIADsvg}
 					company="SSIAD Hesdin-la-Forêt"
-					role="Développment d'un site web"
+					role="Développement d'un intranet"
+					stacks="React TS - supabase"
+					date="2025 - 2026"
+				/>
+
+				<SingleJob
+					imgSrc={SSIADsvg}
+					company="SSIAD Hesdin-la-Forêt"
+					role="Développement d'un site web"
 					stacks="hugo - decapCMS"
-					date="Fevrier - mars 2025"
+					date="2025"
 				/>
 
 				<SingleJob

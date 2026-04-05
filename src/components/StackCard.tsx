@@ -1,6 +1,9 @@
-import React from "react";
+interface Props {
+	icon: string;
+	name: string;
+}
 
-function StackCard({ icon, name }) {
+function StackCard({ icon, name }: Props) {
 	return (
 		<div className="rounded-xl shadow-lg bg-ternary-dark">
 			<div className="w-full mt-8 sm:mt-0 flex items-center justify-center px-4 pt-6 pb-5">

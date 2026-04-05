@@ -1,4 +1,6 @@
-function TarifList({ children }) {
+import type { PropsWithChildren } from "react";
+
+function TarifList({ children }: PropsWithChildren) {
 	return (
 		<ul role="list" className="mt-4 space-y-2 text-lg/6 text-gray-300">
 			{children}

@@ -1,4 +1,3 @@
-import React from "react";
 import developerDark from "@/assets/developer-dark.svg";
 import { ArrowDownToLine } from "lucide-react";
 

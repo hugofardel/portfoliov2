@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./App.css";
 
 @theme {
 	--color-primary-light: #f7f8fc;
@@ -11,6 +12,11 @@
 
 	--color-background: hsl(220 13% 18%);
 	--color-foreground: hsl(219 14% 71%);
+}
+
+h2 {
+	font-family: "GeneralSans-Medium";
+	@apply text-2xl sm:text-4xl mb-1 text-ternary-light;
 }
 
 body {

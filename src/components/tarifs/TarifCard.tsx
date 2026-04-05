@@ -1,4 +1,12 @@
-function TarifCard({ title, description, price, children }) {
+import type { PropsWithChildren } from "react";
+
+interface Props extends PropsWithChildren {
+	title: string;
+	description: string;
+	price: string;
+}
+
+function TarifCard({ title, description, price, children }: Props) {
 	return (
 		<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-ternary-dark p-4 sm:p-8 h-full border-1 border-gray-600">
 			<div className="text-lg/6 sm:text-xl/6 font-medium text-white">{title}</div>
@@ -8,6 +16,10 @@ function TarifCard({ title, description, price, children }) {
 				<span className="text-xl/6 sm:text-3xl/6 text-indigo-400">{" " + price}</span>
 			</div>
 			{children}
+
+			<div className="flex flex-row justify-center items-center">
+				<button>Devis</button>
+			</div>
 		</div>
 	);
 }

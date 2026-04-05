@@ -1,4 +1,4 @@
-import StackCard from "@/components/StackCard.jsx";
+import StackCard from "@/components/StackCard";
 
 import ReactSvg from "@/assets/react.svg";
 import NextSvg from "@/assets/next.svg";
@@ -16,7 +16,7 @@ function Stack() {
 	return (
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
 			<div className="text-center">
-				<p className="font-general-medium text-2xl sm:text-4xl mb-3 text-ternary-light">Mes technologies / outils</p>
+				<h2>Mes technologies / outils</h2>
 				<div className="flex justify-between border-b border-secondary-dark pb-3 gap-3"></div>
 			</div>
 

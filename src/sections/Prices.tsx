@@ -1,12 +1,12 @@
-import TarifCard from "../components/tarifs/TarifCard";
-import TarifList from "../components/tarifs/TarifList";
-import TarifItem from "../components/tarifs/TarifItem";
+import TarifCard from "@/components/tarifs/TarifCard";
+import TarifList from "@/components/tarifs/TarifList";
+import TarifItem from "@/components/tarifs/TarifItem";
 
 function Prices() {
 	return (
 		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
 			<div className="text-center">
-				<div className="font-medium text-2xl sm:text-4xl mb-4 text-ternary-light">Mes tarifs</div>
+				<h2>Mes tarifs</h2>
 				<p className="font-medium mb-1 text-lg text-gray-400">
 					Tarifs indicatifs pour la création de sites web. <br /> Chaque projet étant unique, un devis précis sera
 					établi après discussion.
@@ -45,7 +45,7 @@ function Prices() {
 				</TarifCard>
 			</div>
 
-			<div className="p-8 rounded-xl shadow-lg hover:shadow-xl bg-ternary-dark border-1 border-gray-600 mt-10">
+			<div className="p-8 rounded-xl shadow-lg hover:shadow-xl bg-ternary-dark border border-gray-600 mt-10">
 				<div className="text-indigo-400 font-medium text-lg">Tous les projets incluent :</div>
 				<TarifList>
 					<TarifItem>Design responsive</TarifItem>

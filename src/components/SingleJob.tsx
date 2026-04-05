@@ -1,6 +1,12 @@
-import React from "react";
+interface Props {
+	company: string;
+	role: string;
+	stacks: string;
+	date: string;
+	imgSrc: string;
+}
 
-function SingleJob({ company, role, stacks, date, imgSrc }) {
+function SingleJob({ company, role, stacks, date, imgSrc }: Props) {
 	return (
 		<li className="flex justify-between gap-x-6 py-6">
 			<div className="flex min-w-0 gap-x-4">

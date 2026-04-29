@@ -15,8 +15,7 @@
 }
 
 h2 {
-	font-family: "GeneralSans-Medium";
-	@apply text-2xl sm:text-4xl mb-1 text-ternary-light;
+	@apply text-2xl sm:text-4xl mb-1 text-ternary-light font-medium;
 }
 
 body {

@@ -20,7 +20,7 @@ function Socials() {
 		<div className="container mx-auto">
 			<div className="pt-20 sm:pt-30 pb-6 mt-20 border-t border-secondary-dark">
 				{/* Footer social links */}
-				<div className="font-general-regular flex flex-col justify-center items-center mb-10 sm:mb-20">
+				<div className="flex flex-col justify-center items-center mb-10 sm:mb-20">
 					<h2>Retrouvez moi</h2>
 					<ul className="flex gap-4 sm:gap-8 mt-5">
 						{socialLinks.map((link) => (

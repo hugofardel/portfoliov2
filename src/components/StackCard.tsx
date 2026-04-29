@@ -10,7 +10,7 @@ function StackCard({ icon, name }: Props) {
 				<img src={icon} className="rounded-t-xl border-none size-16" alt={name} />
 			</div>
 			<div className="text-center px-4 pb-6">
-				<p className="font-general-medium text-lg md:text-xl text-ternary-light">{name}</p>
+				<p className="font-medium text-lg md:text-xl text-ternary-light">{name}</p>
 			</div>
 		</div>
 	);

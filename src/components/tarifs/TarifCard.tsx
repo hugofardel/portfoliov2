@@ -1,15 +1,20 @@
-import type { PropsWithChildren } from "react";
 import CTA from "../CTA";
+import { cn } from "@/lib/utils";
 
-interface Props extends PropsWithChildren {
+interface Props {
 	title: string;
 	description: string;
 	price: string;
 }
 
-function TarifCard({ title, description, price, children }: Props) {
+function TarifCard({ title, description, price, className, children }: Props & React.ComponentProps<"div">) {
 	return (
-		<div className="flex flex-col rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-ternary-dark p-4 sm:p-8 h-full border border-gray-600">
+		<div
+			className={cn(
+				"flex flex-col rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-ternary-dark p-4 sm:p-8 h-full border border-gray-600",
+				className,
+			)}
+		>
 			<div className="text-lg/6 sm:text-xl/6 font-medium text-white">{title}</div>
 			<div className="text-pretty mt-1 text-base/6 text-gray-400">{description}</div>
 			<div className="my-12 font-semibold text-gray-300">
@@ -19,7 +24,9 @@ function TarifCard({ title, description, price, children }: Props) {
 			{children}
 
 			<div className="flex flex-row justify-center flex-1 items-end">
-				<CTA className="w-full mb-auto">Demander un devis</CTA>
+				<CTA className="w-full mb-auto" href="#socials">
+					Demander un devis
+				</CTA>
 			</div>
 		</div>
 	);

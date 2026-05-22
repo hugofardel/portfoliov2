@@ -3,14 +3,13 @@ import StackCard from "@/components/StackCard";
 import ReactSvg from "@/assets/react.svg";
 import NextSvg from "@/assets/next.svg";
 import StorybookSvg from "@/assets/storybook.svg";
-import githubSvg from "@/assets/github.svg";
-import reduxSvg from "@/assets/redux.svg";
-import styledComponentsSvg from "@/assets/styled-components.svg";
+import GitSvg from "@/assets/git.svg";
 import nodejsSvg from "@/assets/nodejs.svg";
 import vitestSvg from "@/assets/vitest.svg";
 import typescryptSvg from "@/assets/typescript.svg";
 import tailwindSvg from "@/assets/tailwind.svg";
 import JiraSvg from "@/assets/jira.svg";
+import SupabaseSvg from "@/assets/supabase.svg";
 
 function Stack() {
 	return (
@@ -23,15 +22,14 @@ function Stack() {
 			<div className="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 mt-6 gap-5 sm:gap-10">
 				<StackCard icon={ReactSvg} name="React" />
 				<StackCard icon={NextSvg} name="Next" />
-				<StackCard icon={reduxSvg} name="Redux" />
 				<StackCard icon={typescryptSvg} name="Typescript" />
+				<StackCard icon={SupabaseSvg} name="Supabase" />
+				<StackCard icon={tailwindSvg} name="Tailwind" />
 				<StackCard icon={nodejsSvg} name="NodeJs" />
 				<StackCard icon={vitestSvg} name="Vitest" />
 				<StackCard icon={StorybookSvg} name="Storybook" />
 				<StackCard icon={JiraSvg} name="Jira" />
-				<StackCard icon={tailwindSvg} name="Tailwind" />
-				<StackCard icon={styledComponentsSvg} name="Styled components" />
-				<StackCard icon={githubSvg} name="Github" />
+				<StackCard icon={GitSvg} name="Git" />
 			</div>
 		</section>
 	);

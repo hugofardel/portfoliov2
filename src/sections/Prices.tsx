@@ -46,7 +46,7 @@ function Prices() {
 			</div>
 
 			<div className="p-8 rounded-xl shadow-lg hover:shadow-xl bg-ternary-dark border border-gray-600 mt-10">
-				<div className="text-indigo-400 font-medium text-lg">Tous les projets incluent :</div>
+				<div className="text-indigo-400 font-medium text-lg">Tous les projets incluent</div>
 				<TarifList>
 					<TarifItem>Design responsive</TarifItem>
 					<TarifItem>Optimisation performance</TarifItem>

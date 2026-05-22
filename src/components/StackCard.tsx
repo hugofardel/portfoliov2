@@ -7,7 +7,11 @@ function StackCard({ icon, name }: Props) {
 	return (
 		<div className="rounded-xl shadow-lg bg-ternary-dark">
 			<div className="w-full mt-8 sm:mt-0 flex items-center justify-center px-4 pt-6 pb-5">
-				<img src={icon} className="rounded-t-xl border-none size-16" alt={name} />
+				<img
+					src={icon}
+					className="rounded-t-xl drop-shadow-md drop-shadow-gray-100/40 border-none size-16"
+					alt={name}
+				/>
 			</div>
 			<div className="text-center px-4 pb-6">
 				<p className="font-medium text-lg md:text-xl text-ternary-light">{name}</p>

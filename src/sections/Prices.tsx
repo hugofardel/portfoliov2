@@ -1,6 +1,6 @@
 import TarifCard from "@/components/tarifs/TarifCard";
-import TarifList from "@/components/tarifs/TarifList";
 import TarifItem from "@/components/tarifs/TarifItem";
+import TarifList from "@/components/tarifs/TarifList";
 
 function Prices() {
 	return (
@@ -45,8 +45,8 @@ function Prices() {
 				</TarifCard>
 			</div>
 
-			<div className="p-8 rounded-xl shadow-lg hover:shadow-xl bg-ternary-dark border border-gray-600 mt-10">
-				<div className="text-indigo-400 font-medium text-lg">Tous les projets incluent</div>
+			<div className="p-8 rounded-xl shadow-lg bg-card border border-border mt-10">
+				<div className="text-primary font-medium text-lg">Tous les projets incluent</div>
 				<TarifList>
 					<TarifItem>Design responsive</TarifItem>
 					<TarifItem>Optimisation performance</TarifItem>

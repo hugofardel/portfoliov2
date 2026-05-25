@@ -1,8 +1,8 @@
 import ProjectCard from "@/components/ProjectCard";
 
+import CodeNestImg from "@/assets/codenest.png";
 import MastermindImg from "@/assets/mastermind2.png";
 import XtradeImg from "@/assets/xtrade.png";
-import CodeNestImg from "@/assets/codenest.png";
 
 function Projects() {
 	return (
@@ -10,8 +10,6 @@ function Projects() {
 			<div className="text-center">
 				<h2>Projets personnels</h2>
 			</div>
-
-			<div className="flex justify-between border-b border-secondary-dark pb-3 gap-3"></div>
 
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 sm:gap-10">
 				<ProjectCard

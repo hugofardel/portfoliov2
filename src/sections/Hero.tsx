@@ -14,9 +14,9 @@ function Hero() {
 				</p>
 				<div className="flex justify-center sm:block">
 					<CTA
-						className="w-fit"
+						className="w-fit mt-6 sm:mt-12"
 						download="Hugo_Fardel_CV.pdf"
-						href="/pdf/Hugo_Fardel_CV.pdf"
+						to="/pdf/Hugo_Fardel_CV.pdf"
 						aria-label="Download Resume"
 					>
 						<ArrowDownToLine className="mr-2 sm:mr-3 h-5 w-5 sn:w-6 sm:h-6 duration-100" />

@@ -24,7 +24,7 @@ function TarifCard({ title, description, price, className, children }: Props & R
 			{children}
 
 			<div className="flex flex-row justify-center flex-1 items-end">
-				<CTA className="w-full mb-auto" href="#socials">
+				<CTA to="/" className="w-full mb-auto" href="#socials">
 					Demander un devis
 				</CTA>
 			</div>

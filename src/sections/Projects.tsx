@@ -3,14 +3,11 @@ import ProjectCard from "@/components/ProjectCard";
 import CodeNestImg from "@/assets/codenest.png";
 import MastermindImg from "@/assets/mastermind2.png";
 import XtradeImg from "@/assets/xtrade.png";
+import Section from "@/components/Section";
 
 function Projects() {
 	return (
-		<section className="py-5 sm:py-10 mt-5 sm:mt-10">
-			<div className="text-center">
-				<h2>Projets personnels</h2>
-			</div>
-
+		<Section title="Projects personnels">
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 sm:gap-10">
 				<ProjectCard
 					icon={MastermindImg}
@@ -26,7 +23,7 @@ function Projects() {
 				/>
 				<ProjectCard icon={XtradeImg} name="XTrade" text="React" link="https://x-trade-hugo-fardel.vercel.app/" />
 			</div>
-		</section>
+		</Section>
 	);
 }
 

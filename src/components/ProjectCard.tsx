@@ -14,8 +14,8 @@ function ProjectCard({ icon, name, text, link }: Props) {
 						<img src={icon} className="rounded-t-xl border-none w-full h-100 object-cover" alt="Single Project" loading="lazy" />
 					</div>
 					<div className="text-center px-4 py-6">
-						<p className="font-medium text-lg md:text-xl text-muted-foreground mb-2">{name}</p>
-						<span className="text-lg text-muted-foreground">{text}</span>
+						<p className="font-medium text-lg md:text-xl text-gray-300 mb-2">{name}</p>
+						<span className="text-lg text-gray-400">{text}</span>
 					</div>
 				</div>
 			</a>

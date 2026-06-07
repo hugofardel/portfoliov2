@@ -8,6 +8,7 @@ import ReactSvg from "@/assets/react.svg";
 import StorybookSvg from "@/assets/storybook.svg";
 import SupabaseSvg from "@/assets/supabase.svg";
 import tailwindSvg from "@/assets/tailwind.svg";
+import tanstackSvg from "@/assets/tanstack.svg";
 import typescryptSvg from "@/assets/typescript.svg";
 import vitestSvg from "@/assets/vitest.svg";
 import Section from "@/components/Section";
@@ -19,8 +20,9 @@ function Stack() {
 				<StackCard icon={ReactSvg} name="React" />
 				<StackCard icon={NextSvg} name="Next" />
 				<StackCard icon={typescryptSvg} name="Typescript" />
-				<StackCard icon={SupabaseSvg} name="Supabase" />
 				<StackCard icon={tailwindSvg} name="Tailwind" />
+				<StackCard icon={tanstackSvg} name="Tanstack Query" />
+				<StackCard icon={SupabaseSvg} name="Supabase" />
 				<StackCard icon={nodejsSvg} name="NodeJs" />
 				<StackCard icon={vitestSvg} name="Vitest" />
 				<StackCard icon={StorybookSvg} name="Storybook" />

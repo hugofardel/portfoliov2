@@ -14,7 +14,7 @@ function StackCard({ icon, name }: Props) {
 				/>
 			</div>
 			<div className="text-center px-4 pb-6">
-				<p className="font-medium text-lg md:text-xl text-muted-foreground">{name}</p>
+				<p className="font-medium text-lg md:text-xl text-gray-300">{name}</p>
 			</div>
 		</div>
 	);

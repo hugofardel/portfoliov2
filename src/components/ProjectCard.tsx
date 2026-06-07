@@ -8,7 +8,7 @@ interface Props {
 function ProjectCard({ icon, name, text, link }: Props) {
 	return (
 		<div>
-			<a href={link} aria-label="Single Project">
+			<a href={link} target="_blank" aria-label="Single Project">
 				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-card">
 					<div>
 						<img src={icon} className="rounded-t-xl border-none w-full h-100 object-cover" alt="Single Project" loading="lazy" />

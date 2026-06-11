@@ -1,11 +1,9 @@
-import ProjectCard from "@/components/ProjectCard";
-
-
 import CodeNestImg from "@/assets/codenest.png";
 import MastermindImg from "@/assets/mastermind2.png";
 import XtradeImg from "@/assets/xtrade.png";
+import ProjectCard from "@/components/ProjectCard";
 
-function Projects() {
+function ProjectsPage() {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 sm:gap-10">
             <ProjectCard
@@ -25,4 +23,4 @@ function Projects() {
     )
 }
 
-export default Projects
+export default ProjectsPage;

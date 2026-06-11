@@ -13,7 +13,8 @@ function Projects() {
 					icon={MastermindImg}
 					name="Mastermind"
 					text="React"
-					link="https://mastermind-hugo-fardel.vercel.app/"
+					// link="https://mastermind-hugo-fardel.vercel.app/"
+					link="./projects/mastermind"
 				/>
 				<ProjectCard
 					icon={CodeNestImg}

@@ -6,11 +6,11 @@ function Navbar() {
         <nav className="flex items-center my-6 justify-end">
             <ul className="flex items-center justify-end gap-8">
                 <li>
-                    <Link to="/services" className="uppercase font-medium text-sm text-muted">Services</Link>
+                    <Link to="/projects" className="uppercase font-medium text-sm text-muted">Projets</Link>
                 </li>
 
                 <li>
-                    <CTA className="text-sm" to="/services">Me contacter</CTA>
+                    <CTA className="text-sm" to="/projects">Me contacter</CTA>
                 </li>
             </ul>
         </nav>

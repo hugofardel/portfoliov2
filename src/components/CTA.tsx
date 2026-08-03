@@ -1,7 +1,8 @@
 import { cn } from "@/lib/utils";
+import type { ComponentProps } from "react";
 import { NavLink, type NavLinkProps } from "react-router";
 
-export default function CTA({ className, to, children, ...props }: React.ComponentProps<"a"> & NavLinkProps) {
+export default function CTA({ className, to, children, ...props }: ComponentProps<"a"> & NavLinkProps) {
     return (
         <NavLink
             to={to}

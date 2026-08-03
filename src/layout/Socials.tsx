@@ -24,8 +24,8 @@ function Socials() {
 					<h2>Retrouvez moi</h2>
 					<ul className="flex gap-4 sm:gap-8 mt-5">
 						{socialLinks.map((link) => (
-							<li className="text-gray-400 hover:text-primary cursor-pointer rounded-lg bg-card hover:bg-gray-100 shadow-sm duration-300">
-								<a href={link.url} title={link.title} target="__blank" key={link.id} className="p-4 block">
+							<li key={link.id} className="text-gray-400 hover:text-primary cursor-pointer rounded-lg bg-card hover:bg-gray-100 shadow-sm duration-300">
+								<a href={link.url} title={link.title} target="__blank" className="p-4 block">
 									<i className="text-xl sm:text-2xl md:text-3xl">{link.icon}</i>
 								</a>
 							</li>

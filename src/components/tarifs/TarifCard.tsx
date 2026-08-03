@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import type { ComponentProps } from "react";
 import CTA from "../CTA";
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
 	price: string;
 }
 
-function TarifCard({ title, description, price, className, children }: Props & React.ComponentProps<"div">) {
+function TarifCard({ title, description, price, className, children }: Props & ComponentProps<"div">) {
 	return (
 		<div
 			className={cn(

@@ -1,7 +1,7 @@
 import ProjectCard from "@/components/ProjectCard";
 
-import CodeNestImg from "@/assets/codenest.png";
 import MastermindImg from "@/assets/mastermind2.png";
+import SystemdevImg from "@/assets/systemdev.png";
 import XtradeImg from "@/assets/xtrade.png";
 import Section from "@/components/Section";
 
@@ -13,15 +13,22 @@ function Projects() {
 					icon={MastermindImg}
 					name="Mastermind"
 					text="React"
-					// link="https://mastermind-hugo-fardel.vercel.app/"
-					link="./projects/mastermind"
+					link="https://mastermind.hugo-fardel.fr/"
 				/>
-				<ProjectCard
+				{/* <ProjectCard
 					icon={CodeNestImg}
 					name="CodeNest"
 					text="React / Storybook"
 					link="https://code-nest-nine.vercel.app"
+				/> */}
+
+				<ProjectCard
+					icon={SystemdevImg}
+					name="Systemdev"
+					text="React / tailwind"
+					link="https://systemdev.hugo-fardel.fr"
 				/>
+
 				<ProjectCard icon={XtradeImg} name="XTrade" text="React" link="https://x-trade-hugo-fardel.vercel.app/" />
 			</div>
 		</Section>

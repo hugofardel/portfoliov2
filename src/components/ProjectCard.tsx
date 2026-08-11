@@ -10,7 +10,7 @@ interface Props {
 function ProjectCard({ icon, name, text, link }: Props) {
 	return (
 		<div className="group">
-			<Link to={link} aria-label={`Projet ${name}`} viewTransition>
+			<Link to={link} target="_blank" aria-label={`Projet ${name}`} viewTransition>
 				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-card">
 					<div className="overflow-hidden group-hover:opacity-70">
 						<img src={icon} loading="lazy" className="rounded-t-xl border-none w-full h-100 object-cover duration-400 hover:opacity-95 group-hover:scale-120" alt="Projet illustration" />

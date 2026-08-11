@@ -7,7 +7,7 @@ import Section from "@/components/Section";
 
 function Projects() {
 	return (
-		<Section title="Projects personnels">
+		<Section title="Projets personnels">
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 sm:gap-10">
 				<ProjectCard
 					icon={MastermindImg}

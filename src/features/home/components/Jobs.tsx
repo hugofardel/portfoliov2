@@ -12,12 +12,11 @@ function Jobs() {
 					company="SSIAD Hesdin-la-Forêt"
 					role="Développement d'un intranet"
 					date="2025 - 2026"
-					description="Conception et développement de l'intranet de l'association : messagerie, planning, gestion de documents, etc... pour les équipes."
+					description="Conception et développement de l'intranet de l'association à destination des équipes : messagerie, planning, gestion de documents, etc."
 					highlights={[
 						"Interface sur mesure",
 						"Mise en place d'une base de données",
-						"Maintenance et correction de bugs sur une plateforme B2B commercialisée",
-						"Evolution de la plateforme régulièrement",
+						"Évolutions et ajouts de fonctionnalités réguliers",
 					]}
 					tags={["React", "TypeScript", "Supabase"]}
 				/>
@@ -38,9 +37,10 @@ function Jobs() {
 					company="MIS Group"
 					role="Développeur front-end"
 					date="2022 - 2024"
-					description="Développement front-end de la plateforme e-survey pour la création de questionnaires et obtenir des répondants"
+					description="Développement front-end de la plateforme e-survey, dédiée à la création de questionnaires et à la collecte de répondants."
 					highlights={[
 						"Ajout de fonctionnalités",
+						"Méthode AGILE / sprint hebdomadaire",
 						"Maintenance et correction de bugs sur une plateforme B2B commercialisée",
 						"Mise en place d’un serveur WebSocket",
 						"Travail en binôme sur un produit en production"
@@ -54,7 +54,7 @@ function Jobs() {
 					company="MIS Group"
 					role="Développeur front-end (stage)"
 					date="Mai - octobre 2022"
-					description="Stage de développement front-end : intégration de maquettes et développement de bout en bout de la plateforme"
+					description="Stage de développement front-end : intégration de maquettes et développement de fonctionnalités de la plateforme."
 					highlights={
 						[
 							"Développement d'une plateforme B2B de bout en bout",

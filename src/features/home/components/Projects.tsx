@@ -25,7 +25,7 @@ function Projects() {
 				<ProjectCard
 					icon={SystemdevImg}
 					name="Systemdev"
-					text="React / tailwind"
+					text="React / Tailwind"
 					link="https://systemdev.hugo-fardel.fr"
 				/>
 

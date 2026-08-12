@@ -13,7 +13,7 @@ const services: Service[] = [
 	{
 		id: "site-vitrine",
 		title: "Site vitrine",
-		description: "Je développe des sites vitrines personnalisées à vos besoins.",
+		description: "Je développe des sites vitrines personnalisés à vos besoins.",
 		icon: Globe,
 		points: ["Design sur mesure", "Optimisé SEO & responsive", "Formulaire de contact"],
 	},
@@ -57,7 +57,7 @@ function ServicesCard({ title, description, icon: Icon, points }: Service) {
 			<p className="mt-2 text-pretty text-gray-400 tracking-wide">{description}</p>
 			<ul className="mt-5 space-y-2 border-t border-border/60 pt-5">
 				{points.map((point) => (
-					<li key={point} className="flex items-center gap-2 text-sm text-gray-400">
+					<li key={point} className="flex items-center gap-2 text-base text-gray-400">
 						<Check className="size-4 shrink-0 text-primary" aria-hidden="true" />
 						{point}
 					</li>

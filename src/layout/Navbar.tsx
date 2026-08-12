@@ -6,7 +6,7 @@ function Navbar() {
         <nav className="flex items-center my-6 justify-end">
             <ul className="flex items-center justify-end gap-8">
                 <li>
-                    <Link to="/projects" className="uppercase font-medium text-sm text-muted">Projets</Link>
+                    <Link to="/projects" className="uppercase font-medium text-sm text-muted-foreground">Projets</Link>
                 </li>
 
                 <li>

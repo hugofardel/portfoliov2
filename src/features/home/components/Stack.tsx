@@ -19,11 +19,11 @@ function Stack() {
 			<div className="grid grid-cols-2 lg:grid-cols-5 md:grid-cols-3 mt-6 gap-5 sm:gap-10">
 				<StackCard icon={ReactSvg} name="React" />
 				<StackCard icon={NextSvg} name="Next" />
-				<StackCard icon={typescryptSvg} name="Typescript" />
+				<StackCard icon={typescryptSvg} name="TypeScript" />
 				<StackCard icon={tailwindSvg} name="Tailwind" />
-				<StackCard icon={tanstackSvg} name="Tanstack Query" />
+				<StackCard icon={tanstackSvg} name="TanStack Query" />
 				<StackCard icon={SupabaseSvg} name="Supabase" />
-				<StackCard icon={nodejsSvg} name="NodeJs" />
+				<StackCard icon={nodejsSvg} name="Node.js" />
 				<StackCard icon={vitestSvg} name="Vitest" />
 				<StackCard icon={StorybookSvg} name="Storybook" />
 				<StackCard icon={JiraSvg} name="Jira" />

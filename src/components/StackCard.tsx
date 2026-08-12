@@ -9,7 +9,7 @@ function StackCard({ icon, name }: Props) {
 			<div className="w-full mt-8 sm:mt-0 flex items-center justify-center px-4 pt-6 pb-5">
 				<img
 					src={icon}
-					className="rounded-t-xl drop-shadow-md drop-shadow-gray-100/10 border-none size-16"
+					className="rounded-t-xl drop-shadow-md border-none size-16"
 					alt={name}
 				/>
 			</div>

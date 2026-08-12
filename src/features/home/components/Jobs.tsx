@@ -8,34 +8,61 @@ function Jobs() {
 			<ul role="list" className="divide-y divide-gray-700">
 				<SingleJob
 					imgSrc={SSIADsvg}
+					freelance={true}
 					company="SSIAD Hesdin-la-Forêt"
 					role="Développement d'un intranet"
-					stacks="React TS - supabase"
 					date="2025 - 2026"
+					description="Conception et développement de l'intranet de l'association : messagerie, planning, gestion de documents, etc... pour les équipes."
+					highlights={[
+						"Interface sur mesure",
+						"Mise en place d'une base de données",
+						"Maintenance et correction de bugs sur une plateforme B2B commercialisée",
+						"Evolution de la plateforme régulièrement",
+					]}
+					tags={["React", "TypeScript", "Supabase"]}
 				/>
 
 				<SingleJob
 					imgSrc={SSIADsvg}
+					freelance={true}
 					company="SSIAD Hesdin-la-Forêt"
 					role="Développement d'un site web"
-					stacks="hugo - decapCMS"
 					date="2025"
+					description="Site vitrine de présentation de l'association et de ses services de soins à domicile."
+					tags={["Hugo", "decapCMS"]}
+					link={{ href: "https://www.ssiad-hesdin-la-foret.fr", label: "Voir le site" }}
 				/>
 
 				<SingleJob
 					imgSrc="https://fr.misgroup.io/Content/img/m-favicon.png"
 					company="MIS Group"
 					role="Développeur front-end"
-					stacks="React - NodeJS"
 					date="2022 - 2024"
+					description="Développement front-end de la plateforme e-survey pour la création de questionnaires et obtenir des répondants"
+					highlights={[
+						"Ajout de fonctionnalités",
+						"Maintenance et correction de bugs sur une plateforme B2B commercialisée",
+						"Mise en place d’un serveur WebSocket",
+						"Travail en binôme sur un produit en production"
+					]}
+					tags={["React", "NodeJS"]}
+					link={{ href: "https://admin.e-survey.io/register/step-1?lng=fr", label: "Créez-vous un compte gratuitement pour utiliser la plateforme !" }}
 				/>
 
 				<SingleJob
 					imgSrc="https://fr.misgroup.io/Content/img/m-favicon.png"
 					company="MIS Group"
 					role="Développeur front-end (stage)"
-					stacks="Vuejs"
 					date="Mai - octobre 2022"
+					description="Stage de développement front-end : intégration de maquettes et développement de bout en bout de la plateforme"
+					highlights={
+						[
+							"Développement d'une plateforme B2B de bout en bout",
+							"Développement front-end en Vue.js",
+							"Intégration des maquettes et des données backend",
+							"Travail en binôme avec un développeur backend"
+						]}
+					tags={["Vue.js"]}
 				/>
 			</ul>
 		</Section>

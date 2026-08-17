@@ -3,6 +3,7 @@ import Jobs from "@/features/home/components/Jobs";
 import Projects from "@/features/home/components/Projects";
 import Services from "@/features/home/components/Services";
 import Stack from "@/features/home/components/Stack";
+import Contact from "@/features/home/components/Contact";
 
 function HomePage() {
     return (
@@ -12,6 +13,7 @@ function HomePage() {
             <Jobs />
             <Projects />
             <Stack />
+            <Contact />
         </>
     );
 }

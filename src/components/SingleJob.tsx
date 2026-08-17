@@ -1,4 +1,4 @@
-import { ArrowUpRight, Check } from "lucide-react";
+import { ArrowUpRight, Check, ChevronDown } from "lucide-react";
 
 interface Props {
 	company: string;
@@ -15,8 +15,16 @@ interface Props {
 
 function SingleJob({ company, imgSrc, role, date, description, highlights, tags, image, link, freelance }: Props) {
 	return (
-		<li className="flex gap-x-6 py-6 sm:py-8">
-			<img className="size-12 flex-none rounded-full bg-gray-50 p-1" src={imgSrc} alt={company} />
+		<li className="relative flex gap-x-4 py-6 pl-12 sm:gap-x-6 sm:py-8 sm:pl-16">
+			<span
+				aria-hidden="true"
+				className="absolute top-[46px] left-[9px] size-2 rounded-full bg-primary ring-4 ring-background sm:top-[54px]"
+			/>
+			<img
+				className="mt-0.5 size-12 flex-none self-start object-contain drop-shadow"
+				src={imgSrc}
+				alt={company}
+			/>
 
 			<div className="min-w-0 flex-1">
 				<div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
@@ -28,30 +36,36 @@ function SingleJob({ company, imgSrc, role, date, description, highlights, tags,
 								freelance
 							</span>
 						}
-						<p className="text-lg/6 sm:text-xl/6 font-medium text-gray-300 mt-1.5">{company}</p>
+						<p className="mt-1.5 text-lg/6 sm:text-xl/6 font-medium text-gray-300">{company}</p>
 						<p className="mt-0.5 text-base/5 sm:text-lg/6 text-gray-400">{role}</p>
 					</div>
 					<p className="shrink-0 text-sm text-muted-foreground">{date}</p>
 				</div>
 
-				<p className="mt-3 text-pretty leading-relaxed text-gray-400">{description}</p>
+				<p className="mt-3 text-pretty leading-relaxed text-gray-300">{description}</p>
 
 				{highlights && highlights.length > 0 && (
-					<ul className="mt-3 space-y-2">
-						{highlights.map((point) => (
-							<li key={point} className="flex items-center gap-2 text-base text-gray-400">
-								<Check className="size-4 shrink-0 text-primary" aria-hidden="true" />
-								{point}
-							</li>
-						))}
-					</ul>
+					<details className="group mt-3">
+						<summary className="flex w-fit cursor-pointer list-none items-center gap-1.5 text-sm font-medium text-gray-400 transition-colors hover:text-foreground [&::-webkit-details-marker]:hidden">
+							En savoir plus
+							<ChevronDown className="size-4 transition-transform duration-200 group-open:rotate-180" aria-hidden="true" />
+						</summary>
+						<ul className="mt-3 space-y-2">
+							{highlights.map((point) => (
+								<li key={point} className="flex items-center gap-2 text-base text-gray-400">
+									<Check className="size-4 shrink-0 text-primary" aria-hidden="true" />
+									{point}
+								</li>
+							))}
+						</ul>
+					</details>
 				)}
 
 				<div className="mt-4 flex flex-wrap gap-2">
 					{tags.map((tag) => (
 						<span
 							key={tag}
-							className="rounded-md bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary"
+							className="rounded-md border border-border/60 bg-card px-2.5 py-1 text-xs font-medium text-gray-400"
 						>
 							{tag}
 						</span>
@@ -63,7 +77,7 @@ function SingleJob({ company, imgSrc, role, date, description, highlights, tags,
 						href={link.href}
 						target="_blank"
 						rel="noreferrer"
-						className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/70"
+						className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary underline-offset-4 transition-colors hover:text-primary/70 hover:underline"
 					>
 						{link.label}
 						<ArrowUpRight className="size-4" aria-hidden="true" />

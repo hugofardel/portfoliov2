@@ -18,7 +18,7 @@ const socialLinks = [
 function Socials() {
 	return (
 		<div id="socials" className="container mx-auto">
-			<div className="pt-5 sm:pt-10 pb-6 sm:mt:1 mb-8 py-5 sm:py-10 mt-5 sm:mt-24">
+			<div className="pt-5 sm:pt-10 pb-6 sm:mt:1 mb-8 py-5 sm:py-10 mt-15 sm:mt-24">
 				{/* Footer social links */}
 				<div className="flex flex-col justify-center items-center mb-10 sm:mb-20">
 					<h2>Retrouvez-moi</h2>

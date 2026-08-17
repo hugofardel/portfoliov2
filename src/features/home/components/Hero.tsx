@@ -1,6 +1,5 @@
 import developerDark from "@/assets/developer-dark.svg";
-import CTA from "@/components/CTA";
-import { ArrowDownToLine } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 function Hero() {
 	return (
@@ -13,15 +12,13 @@ function Hero() {
 					Développeur front-end React
 				</p>
 				<div className="flex justify-center sm:block">
-					<CTA
-						className="w-fit mt-6 sm:mt-12"
-						download="Hugo_Fardel_CV.pdf"
-						to="/pdf/Hugo_Fardel_CV.pdf"
-						aria-label="Download Resume"
+					<a
+						href="#contact"
+						className="flex justify-center items-center w-fit mt-6 sm:mt-12 p-2.5 sm:p-3 cursor-pointer font-medium text-lg border border-border shadow-lg rounded-lg bg-primary text-primary-foreground focus:ring-1 focus:ring-primary/10 hover:bg-primary/50 duration-500"
 					>
-						<ArrowDownToLine className="mr-2 sm:mr-3 h-5 w-5 sm:w-6 sm:h-6 duration-100" />
-						<span className="text-sm sm:text-lg duration-100">Télécharger mon CV</span>
-					</CTA>
+						<span className="text-sm sm:text-lg duration-100">Me contacter</span>
+						<ArrowDown className="ml-2 sm:ml-3 h-4 w-4 sm:w-5 sm:h-5 duration-100" />
+					</a>
 				</div>
 			</div>
 			<div className="w-full sm:w-3/5 text-right float-right mt-8 sm:mt-0">

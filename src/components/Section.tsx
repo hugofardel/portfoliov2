@@ -11,7 +11,7 @@ function Section({ title, description, children, ...props }: Props & PropsWithCh
         <section {...props}>
             <div className="text-center py-5 sm:py-10 mt-15 sm:mt-24">
                 <h2>{title}</h2>
-                {description && <p>{description}</p>}
+                {description && <p className="text-gray-400 mt-2">{description}</p>}
             </div>
 
             {children}

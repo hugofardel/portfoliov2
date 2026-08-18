@@ -47,8 +47,9 @@ function Services() {
 
 function ServicesCard({ title, description, icon: Icon, points }: Service) {
 	return (
-		<article className="group flex flex-col rounded-xl bg-card p-6 sm:p-8 shadow-lg hover:shadow-2xl border border-border/60 hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
-			<div className="mb-5 inline-flex size-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary/20">
+		<article className="group relative flex flex-col rounded-xl bg-card p-6 sm:p-8 shadow-lg hover:shadow-2xl hover:shadow-primary/5 border border-border/60 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+			<div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+			<div className="mb-5 inline-flex size-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-all duration-300 group-hover:bg-primary/15 group-hover:shadow-lg group-hover:shadow-primary/10">
 				<Icon className="size-7" aria-hidden="true" />
 			</div>
 			<h3 className="font-semibold text-lg text-gray-300 transition-colors duration-300 group-hover:text-foreground">

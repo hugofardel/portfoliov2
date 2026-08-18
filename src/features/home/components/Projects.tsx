@@ -15,12 +15,6 @@ function Projects() {
 					text="React"
 					link="https://mastermind.hugo-fardel.fr/"
 				/>
-				{/* <ProjectCard
-					icon={CodeNestImg}
-					name="CodeNest"
-					text="React / Storybook"
-					link="https://code-nest-nine.vercel.app"
-				/> */}
 
 				<ProjectCard
 					icon={SystemdevImg}

@@ -15,10 +15,10 @@ interface Props {
 
 function SingleJob({ company, imgSrc, role, date, description, highlights, tags, image, link, freelance }: Props) {
 	return (
-		<li className="relative flex gap-x-4 py-6 pl-12 sm:gap-x-6 sm:py-8 sm:pl-16">
+		<li className="relative flex gap-x-4 py-6 pl-12 sm:gap-x-6 sm:py-8 sm:pl-16 group">
 			<span
 				aria-hidden="true"
-				className="absolute top-[46px] left-[9px] size-2 rounded-full bg-primary ring-4 ring-background sm:top-[54px]"
+				className="absolute top-[46px] left-[9px] size-2 rounded-full bg-primary ring-4 ring-background sm:top-[54px] group-hover:shadow-lg group-hover:shadow-primary/30 transition-shadow duration-300"
 			/>
 			<img
 				className="mt-0.5 size-12 flex-none self-start object-contain drop-shadow"
@@ -45,10 +45,10 @@ function SingleJob({ company, imgSrc, role, date, description, highlights, tags,
 				<p className="mt-3 text-pretty leading-relaxed text-gray-300">{description}</p>
 
 				{highlights && highlights.length > 0 && (
-					<details className="group mt-3">
-						<summary className="flex w-fit cursor-pointer list-none items-center gap-1.5 text-sm font-medium text-gray-400 transition-colors hover:text-foreground [&::-webkit-details-marker]:hidden">
+					<details className="group/expand mt-3">
+						<summary className="flex w-fit cursor-pointer list-none items-center gap-1.5 text-sm font-medium text-gray-400 transition-colors hover:text-primary [&::-webkit-details-marker]:hidden">
 							En savoir plus
-							<ChevronDown className="size-4 transition-transform duration-200 group-open:rotate-180" aria-hidden="true" />
+							<ChevronDown className="size-4 transition-transform duration-200 group-open/expand:rotate-180" aria-hidden="true" />
 						</summary>
 						<ul className="mt-3 space-y-2">
 							{highlights.map((point) => (
@@ -65,7 +65,7 @@ function SingleJob({ company, imgSrc, role, date, description, highlights, tags,
 					{tags.map((tag) => (
 						<span
 							key={tag}
-							className="rounded-md border border-border/60 bg-card px-2.5 py-1 text-xs font-medium text-gray-400"
+							className="rounded-md border border-primary/15 bg-primary/5 px-2.5 py-1 text-xs font-medium text-primary/80"
 						>
 							{tag}
 						</span>

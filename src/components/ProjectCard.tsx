@@ -11,13 +11,14 @@ function ProjectCard({ icon, name, text, link }: Props) {
 	return (
 		<div className="group">
 			<Link to={link} target="_blank" aria-label={`Projet ${name}`} viewTransition>
-				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-card">
-					<div className="overflow-hidden group-hover:opacity-70">
-						<img src={icon} loading="lazy" className="rounded-t-xl border-none w-full h-100 object-cover duration-400 hover:opacity-95 group-hover:scale-120" alt="Illustration du projet" />
+				<div className="relative rounded-xl shadow-lg hover:shadow-2xl hover:shadow-primary/5 cursor-pointer bg-card border border-border/60 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-1">
+					<div className="overflow-hidden">
+						<img src={icon} loading="lazy" className="border-none w-full h-100 object-cover duration-500 group-hover:scale-110" alt="Illustration du projet" />
 					</div>
-					<div className="text-center px-4 py-6">
-						<p className="font-medium text-lg md:text-xl text-gray-300 mb-2">{name}</p>
-						<span className="mt-1 block text-sm text-gray-400">{text}</span>
+					<div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent opacity-90 group-hover:opacity-80 transition-opacity duration-300 pointer-events-none" />
+					<div className="absolute bottom-0 left-0 right-0 px-4 py-6">
+						<p className="font-semibold text-lg md:text-xl text-foreground mb-1">{name}</p>
+						<span className="block text-sm text-primary/80 font-medium">{text}</span>
 					</div>
 				</div>
 			</Link>

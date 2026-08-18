@@ -2,16 +2,15 @@
 @import "./App.css";
 
 @theme {
-	--color-background: oklch(0.2795 0.0368 260.031);
-	--color-foreground: oklch(0.9288 0.0126 255.5078);
-	--color-card: oklch(0.2495 0.0368 260.031);
-	--color-card-foreground: oklch(0.9288 0.0126 255.5078);
+	--color-background: oklch(0.17 0.025 270);
+	--color-foreground: oklch(0.93 0.01 255);
+	--color-card: oklch(0.21 0.035 270);
+	--color-card-foreground: oklch(0.93 0.01 255);
 
-	/**/
-	--color-ternary-light: #f6f7f8;
+	--color-ternary-light: #f0f1f3;
 	--color-ternary-dark: #1e3851;
 
-	--color-primary: oklch(0.6 0.22 279.78);
+	--color-primary: oklch(0.65 0.24 280);
 	--color-primary-foreground: oklch(1 0 0);
 	--color-secondary: oklch(0.9174 0.0435 292.6901);
 	--color-secondary-foreground: oklch(0.4143 0.1039 288.1742);
@@ -21,7 +20,7 @@
 	--color-accent: oklch(0.9299 0.0334 272.7879);
 	--color-accent-foreground: oklch(0.3729 0.0306 259.7328);
 
-	--color-border: oklch(0.3261 0.0597 282.5832);
+	--color-border: oklch(0.28 0.04 275);
 	--color-input: oklch(0.4461 0.0263 256.8018);
 	--color-ring: oklch(0.6801 0.1583 276.9349);
 
@@ -42,12 +41,40 @@ html {
 }
 
 body {
-	background-color: var(--color-background);
+	background: linear-gradient(160deg, oklch(0.17 0.025 270) 0%, oklch(0.14 0.03 285) 50%, oklch(0.17 0.025 270) 100%);
+	background-attachment: fixed;
 	color: var(--color-foreground);
 }
 
 h2 {
 	@apply text-2xl sm:text-4xl mb-1 text-ternary-light font-medium;
+}
+
+/* Glow effect utility */
+.glow-primary {
+	box-shadow: 0 0 40px -10px oklch(0.65 0.24 280 / 0.3);
+}
+
+.glow-primary-hover:hover {
+	box-shadow: 0 0 60px -10px oklch(0.65 0.24 280 / 0.4);
+}
+
+/* Gradient border trick */
+.gradient-border {
+	position: relative;
+	background: var(--color-card);
+}
+.gradient-border::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	padding: 1px;
+	background: linear-gradient(135deg, oklch(0.65 0.24 280 / 0.5), oklch(0.65 0.24 280 / 0.05));
+	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+	pointer-events: none;
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {

@@ -1,5 +1,11 @@
 import Section from "@/components/Section";
-import { Check, Globe, MonitorSmartphone, Wrench, type LucideIcon } from "lucide-react";
+import {
+	Check,
+	Globe,
+	MonitorSmartphone,
+	Wrench,
+	type LucideIcon,
+} from "lucide-react";
 
 type Service = {
 	id: string;
@@ -7,7 +13,7 @@ type Service = {
 	description: string;
 	icon: LucideIcon;
 	points: string[];
-}
+};
 
 const services: Service[] = [
 	{
@@ -15,23 +21,37 @@ const services: Service[] = [
 		title: "Site vitrine",
 		description: "Je développe des sites vitrines personnalisés à vos besoins.",
 		icon: Globe,
-		points: ["Design sur mesure", "Optimisé SEO & responsive", "Formulaire de contact"],
+		points: [
+			"Design sur mesure",
+			"Optimisé SEO & responsive",
+			"Formulaire de contact",
+		],
 	},
 	{
 		id: "application-web",
 		title: "Application web",
-		description: "Des applications pensées pour vous, vos utilisateurs et vos objectifs.",
+		description:
+			"Des applications pensées pour vous, vos utilisateurs et vos objectifs.",
 		icon: MonitorSmartphone,
-		points: ["Fonctionnalités sur mesure", "Sécurité & authentification", "Espace d'administration"],
+		points: [
+			"Fonctionnalités sur mesure",
+			"Sécurité & authentification",
+			"Espace d'administration",
+		],
 	},
 	{
 		id: "maintenance",
 		title: "Maintenance & évolution",
-		description: "J'accompagne votre projet dans la durée : corrections, améliorations et conseils.",
+		description:
+			"J'accompagne votre projet dans la durée : corrections, améliorations et conseils.",
 		icon: Wrench,
-		points: ["Corrections de bugs", "Ajout de fonctionnalités", "Conseil & suivi technique"],
+		points: [
+			"Corrections de bugs",
+			"Ajout de fonctionnalités",
+			"Conseil & suivi technique",
+		],
 	},
-]
+];
 
 function Services() {
 	return (
@@ -55,11 +75,19 @@ function ServicesCard({ title, description, icon: Icon, points }: Service) {
 			<h3 className="font-semibold text-lg text-gray-300 transition-colors duration-300 group-hover:text-foreground">
 				{title}
 			</h3>
-			<p className="mt-2 text-pretty text-gray-400 tracking-wide">{description}</p>
+			<p className="mt-2 text-pretty text-gray-400 tracking-wide">
+				{description}
+			</p>
 			<ul className="mt-5 space-y-2 border-t border-border/60 pt-5">
 				{points.map((point) => (
-					<li key={point} className="flex items-center gap-2 text-base text-gray-400">
-						<Check className="size-4 shrink-0 text-primary" aria-hidden="true" />
+					<li
+						key={point}
+						className="flex items-center gap-2 text-base text-gray-400"
+					>
+						<Check
+							className="size-4 shrink-0 text-primary"
+							aria-hidden="true"
+						/>
 						{point}
 					</li>
 				))}

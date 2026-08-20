@@ -1,8 +1,17 @@
 import type { Job } from "@/data/jobs";
 import { ArrowUpRight, Check, ChevronDown } from "lucide-react";
 
-
-function SingleJob({ company, imgSrc, role, date, description, highlights, tags, link, freelance }: Job) {
+function SingleJob({
+	company,
+	imgSrc,
+	role,
+	date,
+	description,
+	highlights,
+	tags,
+	link,
+	freelance,
+}: Job) {
 	return (
 		<li className="relative flex gap-x-4 py-6 pl-12 sm:gap-x-6 sm:py-8 sm:pl-16 group">
 			<span
@@ -18,31 +27,44 @@ function SingleJob({ company, imgSrc, role, date, description, highlights, tags,
 			<div className="min-w-0 flex-1">
 				<div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
 					<div className="min-w-0">
-						{freelance &&
-							<span
-								className="rounded-md bg-primary/10 px-2.5 py-1 text-sm uppercase font-medium text-primary"
-							>
+						{freelance && (
+							<span className="rounded-md bg-primary/10 px-2.5 py-1 text-sm uppercase font-medium text-primary">
 								freelance
 							</span>
-						}
-						<p className="mt-1.5 text-lg/6 sm:text-xl/6 font-medium text-gray-300">{company}</p>
-						<p className="mt-0.5 text-base/5 sm:text-lg/6 text-gray-400">{role}</p>
+						)}
+						<p className="mt-1.5 text-lg/6 sm:text-xl/6 font-medium text-gray-300">
+							{company}
+						</p>
+						<p className="mt-0.5 text-base/5 sm:text-lg/6 text-gray-400">
+							{role}
+						</p>
 					</div>
 					<p className="shrink-0 text-sm text-muted-foreground">{date}</p>
 				</div>
 
-				<p className="mt-3 text-pretty leading-relaxed text-gray-300">{description}</p>
+				<p className="mt-3 text-pretty leading-relaxed text-gray-300">
+					{description}
+				</p>
 
 				{highlights && highlights.length > 0 && (
 					<details className="group/expand mt-3">
 						<summary className="flex w-fit cursor-pointer list-none items-center gap-1.5 text-sm font-medium text-gray-400 transition-colors hover:text-primary [&::-webkit-details-marker]:hidden">
 							En savoir plus
-							<ChevronDown className="size-4 transition-transform duration-200 group-open/expand:rotate-180" aria-hidden="true" />
+							<ChevronDown
+								className="size-4 transition-transform duration-200 group-open/expand:rotate-180"
+								aria-hidden="true"
+							/>
 						</summary>
 						<ul className="mt-3 space-y-2">
 							{highlights.map((point) => (
-								<li key={point} className="flex items-center gap-2 text-base text-gray-400">
-									<Check className="size-4 shrink-0 text-primary" aria-hidden="true" />
+								<li
+									key={point}
+									className="flex items-center gap-2 text-base text-gray-400"
+								>
+									<Check
+										className="size-4 shrink-0 text-primary"
+										aria-hidden="true"
+									/>
 									{point}
 								</li>
 							))}

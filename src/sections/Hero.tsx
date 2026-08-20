@@ -16,7 +16,8 @@ function Hero() {
 					</span>
 				</h1>
 				<p className="font-medium mt-4 text-lg md:text-xl lg:text-2xl text-center sm:text-left leading-normal text-gray-400">
-					React <span className="text-primary/60 mx-1">/</span> TypeScript <span className="text-primary/60 mx-1">/</span> Tailwind
+					React <span className="text-primary/60 mx-1">/</span> TypeScript{" "}
+					<span className="text-primary/60 mx-1">/</span> Tailwind
 				</p>
 				<div className="flex justify-center sm:block">
 					<a
@@ -29,7 +30,12 @@ function Hero() {
 				</div>
 			</div>
 			<div className="w-full sm:w-3/5 text-right float-right mt-8 sm:mt-0">
-				<img src={developerDark} alt="Illustration dev" loading="eager" fetchPriority="high" />
+				<img
+					src={developerDark}
+					alt="Illustration dev"
+					loading="eager"
+					fetchPriority="high"
+				/>
 			</div>
 		</section>
 	);

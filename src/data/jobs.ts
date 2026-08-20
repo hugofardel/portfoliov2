@@ -20,7 +20,8 @@ export const jobs: Job[] = [
 		freelance: true,
 		company: "SSIAD Hesdin-la-Forêt",
 		date: "2025 - 2026",
-		description: "Intranet complet pour les équipes : messagerie, planning, documents et administration.",
+		description:
+			"Intranet complet pour les équipes : messagerie, planning, documents et administration.",
 		highlights: [
 			"Interface sur mesure",
 			"Conception de modules : messagerie, documents, planning, annuaire, administration, etc.",
@@ -36,7 +37,8 @@ export const jobs: Job[] = [
 		freelance: true,
 		company: "SSIAD Hesdin-la-Forêt",
 		date: "2025",
-		description: "Site vitrine présentant l'association et ses services de soins à domicile.",
+		description:
+			"Site vitrine présentant l'association et ses services de soins à domicile.",
 		tags: ["Hugo", "decapCMS"],
 		imgSrc: SSIADsvg,
 	},
@@ -68,7 +70,8 @@ export const jobs: Job[] = [
 		role: "Développeur front-end (stage)",
 		company: "MIS Group",
 		date: "Mai - octobre 2022",
-		description: "Intégration de maquettes et développement de fonctionnalités en Vue.js sur une plateforme B2B.",
+		description:
+			"Intégration de maquettes et développement de fonctionnalités en Vue.js sur une plateforme B2B.",
 		tags: ["Vue.js"],
 		imgSrc: "https://fr.misgroup.io/Content/img/m-favicon.png",
 		highlights: [

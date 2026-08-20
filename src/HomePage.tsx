@@ -7,17 +7,17 @@ import Socials from "@/sections/Socials";
 import Stack from "@/sections/Stack";
 
 function HomePage() {
-    return (
-        <div className="container mx-auto">
-            <Hero />
-            <Services />
-            <Jobs />
-            <Projects />
-            <Stack />
-            <Contact />
-            <Socials />
-        </div>
-    );
+	return (
+		<div className="container mx-auto">
+			<Hero />
+			<Services />
+			<Jobs />
+			<Projects />
+			<Stack />
+			<Contact />
+			<Socials />
+		</div>
+	);
 }
 
 export default HomePage;

@@ -36,16 +36,21 @@ function Contact() {
 				</div>
 
 				<h2 className="text-2xl sm:text-4xl mb-1 text-ternary-light font-medium text-center">
-					Un projet en tête ? <span className="text-primary">Discutons-en.</span>
+					Un projet en tête ?{" "}
+					<span className="text-primary">Discutons-en.</span>
 				</h2>
 				<p className="mt-2 text-gray-400 tracking-wide text-center">
-					Remplis le formulaire ci-dessous et je te répondrai le plus rapidement possible.
+					Remplis le formulaire ci-dessous et je te répondrai le plus rapidement
+					possible.
 				</p>
 
 				<form onSubmit={handleSubmit} className="mt-8 space-y-5">
 					<div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 						<div className="space-y-1.5">
-							<label htmlFor="name" className="text-sm font-medium text-gray-300">
+							<label
+								htmlFor="name"
+								className="text-sm font-medium text-gray-300"
+							>
 								Nom
 							</label>
 							<input
@@ -59,7 +64,10 @@ function Contact() {
 							/>
 						</div>
 						<div className="space-y-1.5">
-							<label htmlFor="email" className="text-sm font-medium text-gray-300">
+							<label
+								htmlFor="email"
+								className="text-sm font-medium text-gray-300"
+							>
 								Email
 							</label>
 							<input
@@ -75,7 +83,10 @@ function Contact() {
 					</div>
 
 					<div className="space-y-1.5">
-						<label htmlFor="projectType" className="text-sm font-medium text-gray-300">
+						<label
+							htmlFor="projectType"
+							className="text-sm font-medium text-gray-300"
+						>
 							Type de projet
 						</label>
 						<select
@@ -93,7 +104,10 @@ function Contact() {
 					</div>
 
 					<div className="space-y-1.5">
-						<label htmlFor="message" className="text-sm font-medium text-gray-300">
+						<label
+							htmlFor="message"
+							className="text-sm font-medium text-gray-300"
+						>
 							Message
 						</label>
 						<textarea

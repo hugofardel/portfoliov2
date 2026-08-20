@@ -1,4 +1,3 @@
-import js from "@eslint/js";
 import globals from "globals";
 import { defineConfig } from "eslint/config";
 import eslintJs from "@eslint/js";
@@ -26,7 +25,6 @@ export default defineConfig([
 		],
 
 		rules: {
-			...js.configs.recommended.rules,
 			"no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
 		},
 	},

@@ -1,7 +1,7 @@
-import AppRouter from "./AppRouter";
+import HomePage from "./HomePage";
 
 function App() {
-	return <AppRouter />;
+	return <HomePage />;
 }
 
 export default App;

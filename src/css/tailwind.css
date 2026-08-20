@@ -46,10 +46,6 @@ body {
 	color: var(--color-foreground);
 }
 
-h2 {
-	@apply text-2xl sm:text-4xl mb-1 text-ternary-light font-medium;
-}
-
 /* Glow effect utility */
 .glow-primary {
 	box-shadow: 0 0 40px -10px oklch(0.65 0.24 280 / 0.3);
@@ -71,7 +67,9 @@ h2 {
 	border-radius: inherit;
 	padding: 1px;
 	background: linear-gradient(135deg, oklch(0.65 0.24 280 / 0.5), oklch(0.65 0.24 280 / 0.05));
-	-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+	-webkit-mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
 	-webkit-mask-composite: xor;
 	mask-composite: exclude;
 	pointer-events: none;

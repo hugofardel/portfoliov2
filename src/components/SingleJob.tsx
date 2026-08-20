@@ -1,19 +1,8 @@
+import type { Job } from "@/data/jobs";
 import { ArrowUpRight, Check, ChevronDown } from "lucide-react";
 
-interface Props {
-	company: string;
-	imgSrc: string;
-	role: string;
-	date: string;
-	description: string;
-	highlights?: string[];
-	tags: string[];
-	image?: string;
-	link?: { href: string; label: string };
-	freelance?: boolean
-}
 
-function SingleJob({ company, imgSrc, role, date, description, highlights, tags, image, link, freelance }: Props) {
+function SingleJob({ company, imgSrc, role, date, description, highlights, tags, link, freelance }: Job) {
 	return (
 		<li className="relative flex gap-x-4 py-6 pl-12 sm:gap-x-6 sm:py-8 sm:pl-16 group">
 			<span
@@ -84,15 +73,6 @@ function SingleJob({ company, imgSrc, role, date, description, highlights, tags,
 					</a>
 				)}
 			</div>
-
-			{image && (
-				<img
-					src={image}
-					alt={`Aperçu du projet ${company}`}
-					loading="lazy"
-					className="mt-1 hidden h-32 w-44 flex-none self-start rounded-xl border border-border/60 object-cover shadow-lg md:block lg:h-36 lg:w-52"
-				/>
-			)}
 		</li>
 	);
 }

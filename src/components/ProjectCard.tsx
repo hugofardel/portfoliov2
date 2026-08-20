@@ -1,16 +1,9 @@
-import { Link } from "react-router";
+import type { Project } from "@/data/projects";
 
-interface Props {
-	icon: string;
-	name: string;
-	text: string;
-	link: string;
-}
-
-function ProjectCard({ icon, name, text, link }: Props) {
+function ProjectCard({ icon, name, text, link }: Project) {
 	return (
 		<div className="group">
-			<Link to={link} target="_blank" aria-label={`Projet ${name}`} viewTransition>
+			<a href={link} target="_blank" rel="noopener noreferrer" aria-label={`Projet ${name}`}>
 				<div className="relative rounded-xl shadow-lg hover:shadow-2xl hover:shadow-primary/5 cursor-pointer bg-card border border-border/60 hover:border-primary/30 overflow-hidden transition-all duration-300 hover:-translate-y-1">
 					<div className="overflow-hidden">
 						<img src={icon} loading="lazy" className="border-none w-full h-100 object-cover duration-500 group-hover:scale-110" alt="Illustration du projet" />
@@ -21,7 +14,7 @@ function ProjectCard({ icon, name, text, link }: Props) {
 						<span className="block text-sm text-primary/80 font-medium">{text}</span>
 					</div>
 				</div>
-			</Link>
+			</a>
 		</div>
 	);
 }

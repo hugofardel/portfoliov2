@@ -35,7 +35,7 @@ function Contact() {
 					<Mail className="size-7" aria-hidden="true" />
 				</div>
 
-				<h2 className="text-2xl sm:text-4xl font-medium text-ternary-light text-center">
+				<h2 className="text-2xl sm:text-4xl mb-1 text-ternary-light font-medium text-center">
 					Un projet en tête ? <span className="text-primary">Discutons-en.</span>
 				</h2>
 				<p className="mt-2 text-gray-400 tracking-wide text-center">

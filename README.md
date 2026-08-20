@@ -26,12 +26,12 @@ Ce portfolio est une application web single-page développée avec React et styl
 3. Installez les dépendances :
 
    ```
-   npm install
+   pnpm install
    ```
 
 4. Lancez le serveur de développement :
    ```
-   npm start
+   pnpm run dev
    ```
 
-L'application sera accessible à l'adresse [http://localhost:3000](http://localhost:3000).
+L'application sera accessible à l'adresse [http://localhost:5173](http://localhost:5173).

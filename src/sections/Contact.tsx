@@ -1,5 +1,13 @@
+import Button from "@/components/Button";
+import emailjs from "@emailjs/browser";
 import { Mail, Send } from "lucide-react";
-import { type FormEvent, useState } from "react";
+import {
+	type ChangeEvent,
+	type FormEvent,
+	useEffect,
+	useRef,
+	useState,
+} from "react";
 
 const PROJECT_TYPES = [
 	"Site vitrine",
@@ -7,23 +15,60 @@ const PROJECT_TYPES = [
 	"Maintenance & évolution",
 	"Recrutement",
 	"Autre",
-];
+] as const;
+
+type ProjectType = (typeof PROJECT_TYPES)[number];
+
+type FormState = {
+	name: string;
+	email: string;
+	projectType: ProjectType;
+	message: string;
+};
+
+const INITIAL_FORM: FormState = {
+	name: "",
+	email: "",
+	projectType: PROJECT_TYPES[0],
+	message: "",
+};
 
 function Contact() {
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [projectType, setProjectType] = useState(PROJECT_TYPES[0]);
-	const [message, setMessage] = useState("");
+	const [form, setForm] = useState<FormState>(INITIAL_FORM);
+	const [status, setStatus] = useState<
+		"idle" | "sending" | "success" | "error"
+	>("idle");
+	const formRef = useRef<HTMLFormElement>(null);
+
+	useEffect(() => {
+		emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY ?? "");
+	}, []);
+
+	function handleChange(
+		e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
+	) {
+		setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+	}
 
 	function handleSubmit(e: FormEvent) {
 		e.preventDefault();
+		setStatus("sending");
 
-		const subject = encodeURIComponent(`[Portfolio] ${projectType} — ${name}`);
-		const body = encodeURIComponent(
-			`Nom : ${name}\nEmail : ${email}\nType de projet : ${projectType}\n\n${message}`,
-		);
+		if (!formRef.current) return;
 
-		window.location.href = `mailto:hugo.fardel@gmail.com?subject=${subject}&body=${body}`;
+		emailjs
+			.sendForm(
+				import.meta.env.VITE_EMAILJS_SERVICE_ID ?? "",
+				import.meta.env.VITE_EMAILJS_TEMPLATE_ID ?? "",
+				formRef.current,
+			)
+			.then(() => {
+				setStatus("success");
+				setForm(INITIAL_FORM);
+			})
+			.catch(() => {
+				setStatus("error");
+			});
 	}
 
 	return (
@@ -37,14 +82,15 @@ function Contact() {
 
 				<h2 className="text-2xl sm:text-4xl mb-1 text-ternary-light font-medium text-center">
 					Un projet en tête ?{" "}
-					<span className="text-primary">Discutons-en.</span>
+					<span className="text-[oklch(0.69_0.24_280)]">Discutons-en.</span>
 				</h2>
+
 				<p className="mt-2 text-gray-400 tracking-wide text-center">
 					Remplis le formulaire ci-dessous et je te répondrai le plus rapidement
 					possible.
 				</p>
 
-				<form onSubmit={handleSubmit} className="mt-8 space-y-5">
+				<form ref={formRef} onSubmit={handleSubmit} className="mt-8 space-y-5">
 					<div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 						<div className="space-y-1.5">
 							<label
@@ -55,10 +101,11 @@ function Contact() {
 							</label>
 							<input
 								id="name"
+								name="name"
 								type="text"
 								required
-								value={name}
-								onChange={(e) => setName(e.target.value)}
+								value={form.name}
+								onChange={handleChange}
 								placeholder="Ton nom"
 								className="w-full rounded-lg border border-border/60 bg-background px-4 py-2.5 text-foreground placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition-all"
 							/>
@@ -72,10 +119,11 @@ function Contact() {
 							</label>
 							<input
 								id="email"
+								name="email"
 								type="email"
 								required
-								value={email}
-								onChange={(e) => setEmail(e.target.value)}
+								value={form.email}
+								onChange={handleChange}
 								placeholder="ton@email.com"
 								className="w-full rounded-lg border border-border/60 bg-background px-4 py-2.5 text-foreground placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition-all"
 							/>
@@ -91,8 +139,9 @@ function Contact() {
 						</label>
 						<select
 							id="projectType"
-							value={projectType}
-							onChange={(e) => setProjectType(e.target.value)}
+							name="projectType"
+							value={form.projectType}
+							onChange={handleChange}
 							className="w-full rounded-lg border border-border/60 bg-background px-4 py-2.5 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition-all"
 						>
 							{PROJECT_TYPES.map((type) => (
@@ -112,23 +161,30 @@ function Contact() {
 						</label>
 						<textarea
 							id="message"
+							name="message"
 							required
 							rows={5}
-							value={message}
-							onChange={(e) => setMessage(e.target.value)}
+							value={form.message}
+							onChange={handleChange}
 							placeholder="Décris ton projet..."
 							className="w-full resize-none rounded-lg border border-border/60 bg-background px-4 py-2.5 text-foreground placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary/40 transition-all"
 						/>
 					</div>
 
-					<div className="flex justify-center pt-2">
-						<button
-							type="submit"
-							className="flex items-center gap-2.5 cursor-pointer px-8 py-3 font-semibold text-lg rounded-xl bg-primary text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:bg-primary/80 active:scale-[0.98] transition-all duration-300"
-						>
+					<div className="flex flex-col items-center gap-3 pt-2">
+						<Button type="submit" disabled={status === "sending"}>
 							<Send className="h-5 w-5" />
-							Envoyer
-						</button>
+							{status === "sending" ? "Envoi en cours..." : "Envoyer"}
+						</Button>
+
+						{status === "success" && (
+							<p className="text-green-400 bg-green-400/10 border-green-400 border rounded-md mt-2 px-2 py-3 w-full text-center text-sm">Message envoyé !</p>
+						)}
+						{status === "error" && (
+							<p className="text-red-400 bg-red-400/10 border-red-400 border rounded-md mt-2 px-2 py-3 w-full text-center text-sm">
+								Erreur lors de l'envoi. Veuillez réessayer plus tard.
+							</p>
+						)}
 					</div>
 				</form>
 			</article>

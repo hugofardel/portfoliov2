@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@emailjs/browser':
+        specifier: ^4.4.1
+        version: 4.4.1
       '@tailwindcss/vite':
         specifier: ^4.0.15
         version: 4.2.2(vite@8.0.14(@types/node@26.1.2)(jiti@2.6.1))
@@ -106,6 +109,10 @@ packages:
     engines: {node: '>=14.21.3'}
     cpu: [x64]
     os: [win32]
+
+  '@emailjs/browser@4.4.1':
+    resolution: {integrity: sha512-DGSlP9sPvyFba3to2A50kDtZ+pXVp/0rhmqs2LmbMS3I5J8FSOgLwzY2Xb4qfKlOVHh29EAutLYwe5yuEZmEFg==}
+    engines: {node: '>=14.0.0'}
 
   '@emnapi/core@1.10.0':
     resolution: {integrity: sha512-yq6OkJ4p82CAfPl0u9mQebQHKPJkY7WrIuk205cTYnYe+k2Z8YBh11FrbRG/H6ihirqcacOgl2BIO8oyMQLeXw==}
@@ -605,6 +612,8 @@ snapshots:
 
   '@biomejs/cli-win32-x64@2.5.9':
     optional: true
+
+  '@emailjs/browser@4.4.1': {}
 
   '@emnapi/core@1.10.0':
     dependencies:

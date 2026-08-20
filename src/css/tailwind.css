@@ -10,7 +10,7 @@
 	--color-ternary-light: #f0f1f3;
 	--color-ternary-dark: #1e3851;
 
-	--color-primary: oklch(0.65 0.24 280);
+	--color-primary: oklch(0.52 0.24 280);
 	--color-primary-foreground: oklch(1 0 0);
 	--color-secondary: oklch(0.9174 0.0435 292.6901);
 	--color-secondary-foreground: oklch(0.4143 0.1039 288.1742);

@@ -8,7 +8,7 @@ import Stack from "./sections/Stack";
 
 function App() {
 	return (
-		<div className="container mx-auto">
+		<main className="container mx-auto">
 			<Hero />
 			<Services />
 			<Jobs />
@@ -16,7 +16,7 @@ function App() {
 			<Stack />
 			<Contact />
 			<Socials />
-		</div>
+		</main>
 	);
 }
 

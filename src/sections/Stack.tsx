@@ -1,6 +1,3 @@
-import Section from "@/components/Section";
-import StackCard from "@/components/StackCard";
-
 import gitSvg from "@/assets/git.svg";
 import jiraSvg from "@/assets/jira.svg";
 import nextSvg from "@/assets/next.svg";
@@ -12,6 +9,8 @@ import tailwindSvg from "@/assets/tailwind.svg";
 import tanstackSvg from "@/assets/tanstack.svg";
 import typescriptSvg from "@/assets/typescript.svg";
 import vitestSvg from "@/assets/vitest.svg";
+import Section from "@/components/Section";
+import StackCard from "@/components/StackCard";
 
 function Stack() {
 	return (

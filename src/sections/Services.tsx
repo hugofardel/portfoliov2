@@ -1,11 +1,11 @@
-import Section from "@/components/Section";
 import {
 	Check,
 	Globe,
+	type LucideIcon,
 	MonitorSmartphone,
 	Wrench,
-	type LucideIcon,
 } from "lucide-react";
+import Section from "@/components/Section";
 
 type Service = {
 	id: string;

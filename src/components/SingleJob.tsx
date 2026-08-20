@@ -1,5 +1,5 @@
-import type { Job } from "@/data/jobs";
 import { ArrowUpRight, Check, ChevronDown } from "lucide-react";
+import type { Job } from "@/data/jobs";
 
 function SingleJob({
 	company,

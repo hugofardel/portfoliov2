@@ -1,5 +1,5 @@
-import developerDark from "@/assets/developer-dark.svg";
 import { ArrowDown } from "lucide-react";
+import developerDark from "@/assets/developer-dark.svg";
 
 function Hero() {
 	return (

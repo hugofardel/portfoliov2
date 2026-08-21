@@ -1,13 +1,13 @@
-import { ArrowDown } from "lucide-react";
 import developerDark from "@/assets/developer-dark.svg";
 import Button from "@/components/Button";
+import { ArrowDown } from "lucide-react";
 
 function Hero() {
 	return (
 		<section className="relative flex flex-col sm:justify-between items-center sm:flex-row mt-12 md:mt-2">
 			<div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/8 blur-[120px] pointer-events-none" />
 
-			<div className="relative w-full md:w-2/5 text-left">
+			<div className="relative w-full md:w-2/5 text-center sm:text-left">
 				<div className="inline-block mb-4 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium tracking-wide">
 					Développeur front-end
 				</div>
@@ -20,7 +20,7 @@ function Hero() {
 					React <span className="text-primary/60 mx-1">/</span> TypeScript{" "}
 					<span className="text-primary/60 mx-1">/</span> Tailwind
 				</p>
-				<div className="flex justify-center sm:block">
+				<div className="flex justify-center sm:block mt-4">
 					<Button
 						as="a"
 						href="#contact"

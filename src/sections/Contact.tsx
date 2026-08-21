@@ -1,3 +1,4 @@
+import Button from "@/components/Button";
 import emailjs from "@emailjs/browser";
 import { Mail, Send } from "lucide-react";
 import {
@@ -7,7 +8,6 @@ import {
 	useRef,
 	useState,
 } from "react";
-import Button from "@/components/Button";
 
 const PROJECT_TYPES = [
 	"Site vitrine",
@@ -72,7 +72,7 @@ function Contact() {
 	}
 
 	return (
-		<section id="contact" className="mt-15 sm:mt-50">
+		<section id="contact" className="mt-15 sm:mt-50 px-3">
 			<article className="relative rounded-xl bg-card p-6 sm:p-8 shadow-lg shadow-primary/5 border border-border/60 max-w-4xl mx-auto overflow-hidden">
 				<div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
 

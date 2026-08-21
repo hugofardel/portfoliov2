@@ -12,7 +12,7 @@ function Section({
 	...props
 }: Props & PropsWithChildren & ComponentProps<"section">) {
 	return (
-		<section {...props}>
+		<section className="px-3" {...props}>
 			<div className="text-center py-5 sm:py-10 mt-15 sm:mt-24">
 				<h2 className="text-2xl sm:text-4xl mb-1 text-ternary-light font-medium">
 					{title}

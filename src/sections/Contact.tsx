@@ -86,8 +86,7 @@ function Contact() {
 				</h2>
 
 				<p className="mt-2 text-gray-400 tracking-wide text-center">
-					Remplis le formulaire ci-dessous et je te répondrai le plus rapidement
-					possible.
+					Remplissez le formulaire ci-dessous et je vous répondrez dans les 48 heures.
 				</p>
 
 				<form ref={formRef} onSubmit={handleSubmit} className="mt-8 space-y-5">

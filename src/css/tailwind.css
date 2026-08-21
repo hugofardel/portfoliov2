@@ -38,12 +38,19 @@
 
 html {
 	scroll-behavior: smooth;
+	background-color: var(--color-foreground);
 }
 
 body {
-	background: linear-gradient(160deg, oklch(0.17 0.025 270) 0%, oklch(0.14 0.03 285) 50%, oklch(0.17 0.025 270) 100%);
-	background-attachment: fixed;
 	color: var(--color-foreground);
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	background: linear-gradient(160deg, oklch(0.17 0.025 270) 0%, oklch(0.14 0.03 285) 50%, oklch(0.17 0.025 270) 100%);
 }
 
 /* Glow effect utility */

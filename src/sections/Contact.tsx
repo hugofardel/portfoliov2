@@ -1,4 +1,3 @@
-import Button from "@/components/Button";
 import emailjs from "@emailjs/browser";
 import { Mail, Send } from "lucide-react";
 import {
@@ -8,6 +7,7 @@ import {
 	useRef,
 	useState,
 } from "react";
+import Button from "@/components/Button";
 
 const PROJECT_TYPES = [
 	"Site vitrine",
@@ -104,6 +104,7 @@ function Contact() {
 								name="name"
 								type="text"
 								required
+								maxLength={50}
 								value={form.name}
 								onChange={handleChange}
 								placeholder="Ton nom"
@@ -122,6 +123,8 @@ function Contact() {
 								name="email"
 								type="email"
 								required
+								maxLength={254}
+								pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
 								value={form.email}
 								onChange={handleChange}
 								placeholder="ton@email.com"
@@ -164,6 +167,8 @@ function Contact() {
 							name="message"
 							required
 							rows={5}
+							minLength={10}
+							maxLength={2000}
 							value={form.message}
 							onChange={handleChange}
 							placeholder="Décris ton projet..."
@@ -178,7 +183,9 @@ function Contact() {
 						</Button>
 
 						{status === "success" && (
-							<p className="text-green-400 bg-green-400/10 border-green-400 border rounded-md mt-2 px-2 py-3 w-full text-center text-sm">Message envoyé !</p>
+							<p className="text-green-400 bg-green-400/10 border-green-400 border rounded-md mt-2 px-2 py-3 w-full text-center text-sm">
+								Message envoyé !
+							</p>
 						)}
 						{status === "error" && (
 							<p className="text-red-400 bg-red-400/10 border-red-400 border rounded-md mt-2 px-2 py-3 w-full text-center text-sm">

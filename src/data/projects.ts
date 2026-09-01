@@ -1,7 +1,6 @@
+import blueprintImg from "@/assets/blueprint.png";
 import mastermindImg from "@/assets/mastermind2.png";
 import systemdevImg from "@/assets/systemdev.png";
-import xtradeImg from "@/assets/xtrade.png";
-import blueprintImg from "@/assets/blueprint.png";
 
 export type Project = {
 	id: string;

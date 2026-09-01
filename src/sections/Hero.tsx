@@ -1,6 +1,6 @@
+import { ArrowDown } from "lucide-react";
 import developerDark from "@/assets/developer-dark.svg";
 import Button from "@/components/Button";
-import { ArrowDown } from "lucide-react";
 
 function Hero() {
 	return (

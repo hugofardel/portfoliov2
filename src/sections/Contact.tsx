@@ -1,4 +1,3 @@
-import Button from "@/components/Button";
 import emailjs from "@emailjs/browser";
 import { Mail, Send } from "lucide-react";
 import {
@@ -8,6 +7,7 @@ import {
 	useRef,
 	useState,
 } from "react";
+import Button from "@/components/Button";
 
 const PROJECT_TYPES = [
 	"Site vitrine",
@@ -86,7 +86,8 @@ function Contact() {
 				</h2>
 
 				<p className="mt-2 text-gray-400 tracking-wide text-center">
-					Remplissez le formulaire ci-dessous et je vous répondrez dans les 48 heures.
+					Remplissez le formulaire ci-dessous et je vous répondrez dans les 48
+					heures.
 				</p>
 
 				<form ref={formRef} onSubmit={handleSubmit} className="mt-8 space-y-5">

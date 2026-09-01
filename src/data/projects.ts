@@ -1,6 +1,7 @@
 import mastermindImg from "@/assets/mastermind2.png";
 import systemdevImg from "@/assets/systemdev.png";
 import xtradeImg from "@/assets/xtrade.png";
+import blueprintImg from "@/assets/blueprint.png";
 
 export type Project = {
 	id: string;
@@ -26,10 +27,10 @@ export const projects: Project[] = [
 		link: "https://systemdev.hugo-fardel.fr",
 	},
 	{
-		id: "xtrade",
-		icon: xtradeImg,
-		name: "Xtrade",
-		text: "React",
-		link: "https://x-trade-hugo-fardel.vercel.app/",
+		id: "blueprint",
+		icon: blueprintImg,
+		name: "Blueprint",
+		text: "Nextjs / Tailwind / Drizzle",
+		link: "https://blueprint.hugo-fardel.fr/",
 	},
 ];

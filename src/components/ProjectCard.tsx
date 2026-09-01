@@ -23,7 +23,7 @@ function ProjectCard({ icon, name, text, link }: Project) {
 						<p className="font-semibold text-lg md:text-xl text-foreground mb-1">
 							{name}
 						</p>
-						<span className="block text-sm text-primary/80 font-medium">
+						<span className="inline-block mb-4 px-3 py-1 rounded-full border border-primary/20 bg-card text-primary text-sm font-medium tracking-wide">
 							{text}
 						</span>
 					</div>

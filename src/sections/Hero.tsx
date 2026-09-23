@@ -9,7 +9,7 @@ function Hero() {
 
 			<div className="relative w-full md:w-2/5 text-center sm:text-left">
 				<div className="inline-block mb-4 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium tracking-wide">
-					Développeur front-end
+					Développeur Full Stack JS
 				</div>
 				<h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-center sm:text-left uppercase leading-tight">
 					<span className="bg-gradient-to-r from-foreground via-foreground to-primary/70 bg-clip-text text-transparent">
@@ -21,23 +21,14 @@ function Hero() {
 					<span className="text-primary/60 mx-1">/</span> Tailwind
 				</p>
 				<div className="flex justify-center sm:block mt-4">
-					<Button
-						as="a"
-						href="#contact"
-						className="group justify-center w-fit mt-6 sm:mt-12"
-					>
+					<Button as="a" href="#contact" className="group justify-center w-fit mt-6 sm:mt-12">
 						Me contacter
 						<ArrowDown className="h-4 w-4 sm:w-5 sm:h-5 duration-300 group-hover:translate-y-0.5" />
 					</Button>
 				</div>
 			</div>
 			<div className="w-full sm:w-3/5 text-right float-right mt-8 sm:mt-0">
-				<img
-					src={developerDark}
-					alt="Illustration dev"
-					loading="eager"
-					fetchPriority="high"
-				/>
+				<img src={developerDark} alt="Illustration dev" loading="eager" fetchPriority="high" />
 			</div>
 		</section>
 	);
